@@ -11,10 +11,10 @@ const Board = () => {
     state.setBoardState,
     state.updateTodoInDB,
   ]);
-  console.log(board);
   useEffect(() => {
     getBoard();
   }, [getBoard]);
+
   const handleOnDragEnd = (result: DropResult) => {
     const { destination, source, type } = result;
     if (!destination) return;
