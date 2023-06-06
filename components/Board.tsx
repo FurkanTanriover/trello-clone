@@ -1,10 +1,25 @@
 "use client";
 import { useBoardStore } from "@/store/BoardStore";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, DropResult } from "react-beautiful-dnd";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Column from "./Column";
 
 const Board = () => {
+  const notify = () =>
+    toast.success("Update task status successfully!", {
+      position: toast.POSITION.TOP_CENTER,
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
   const [getBoard, board, setBoardState, updateTodoInDB] = useBoardStore((state) => [
     state.getBoard,
     state.board,
@@ -74,10 +89,12 @@ const Board = () => {
       // update db
       updateTodoInDB(todoMoved, endCol.id);
       setBoardState({ ...board, columns: newColumns });
+      notify();
     }
   };
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
+      <ToastContainer />
       <Droppable droppableId="board" direction="horizontal" type="column">
         {(provided: any) => (
           <div
