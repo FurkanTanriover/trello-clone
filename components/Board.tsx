@@ -20,6 +20,7 @@ const Board = () => {
       theme: "light",
     });
 
+
   const [getBoard, board, setBoardState, updateTodoInDB] = useBoardStore((state) => [
     state.getBoard,
     state.board,
