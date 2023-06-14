@@ -14,6 +14,8 @@ interface BoardState {
   searchString: string;
   setSearchString: (searchString: string) => void;
   deleteTask: (taskIndex: number, todoId: Todo, id: TypedColumn) => void;
+  image: File | null;
+  setImage: (image: File | null) => void;
 }
 
 export const useBoardStore = create<BoardState>((set, get) => ({
@@ -23,9 +25,11 @@ export const useBoardStore = create<BoardState>((set, get) => ({
   searchString: "",
   newTaskInput: "",
   newTaskType: "todo",
+  image: null,
   setNewTaskType: (type: TypedColumn) => set({ newTaskType: type }),
   setNewTaskInput: (input: string) => set({ newTaskInput: input }),
   setSearchString: (searchString: string) => set({ searchString }),
+  setImage: (image: File | null) => set({ image }),
   deleteTask: async (taskIndex: number, todo: Todo, id: TypedColumn) => {
     const newColumns = new Map(get().board.columns);
     //delete todoId from newColumns
