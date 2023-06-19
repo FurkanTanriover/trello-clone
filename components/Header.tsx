@@ -16,16 +16,16 @@ const Header = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [suggestion, setSuggestion] = useState<string>("");
 
-  // useEffect(() => {
-  //   if (board.columns.size === 0) return;
-  //   setLoading(true);
-  //   const fetchSuggestionFunc = async () => {
-  //     const suggestion = await fetchSuggestion(board);
-  //     setSuggestion(suggestion);
-  //     setLoading(false);
-  //   };
-  //   fetchSuggestionFunc();
-  // }, [board]);
+  useEffect(() => {
+    if (board.columns.size === 0) return;
+    setLoading(true);
+    const fetchSuggestionFunc = async () => {
+      const suggestion = await fetchSuggestion(board);
+      setSuggestion(suggestion);
+      setLoading(false);
+    };
+    fetchSuggestionFunc();
+  }, [board]);
 
   return (
     <header>
@@ -70,7 +70,7 @@ const Header = () => {
             </button>
           </form>
           {/* Avatar */}
-          <Avatar name="Furkan Bey" round size="50" color="#0055D1" />
+          <Avatar name="Furkan Tanrıöver" round size="50" color="#0055D1" />
         </div>
       </div>
       <div className="flex items-center justify-center px-5 py-2 md:py-5">

@@ -121,7 +121,6 @@ function Modal() {
                     hidden
                     onChange={(e) => {
                       // check e is an image
-                      console.log("e.target.files", e.target.files[0]);
                       if (!e.target.files![0].type.startsWith("image/")) return;
                       setImage(e.target.files![0]);
                     }}

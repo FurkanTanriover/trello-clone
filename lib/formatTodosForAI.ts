@@ -1,6 +1,5 @@
 const formatTodosForAI = (board: Board) => {
   const todos = Array.from(board.columns.entries());
-  console.log(todos, "todos");
 
   const flatArray = todos.reduce((map, [key, value]) => {
     map[key] = value.todos;
