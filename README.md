@@ -35,7 +35,7 @@ Bu projeyi kullanmaya başlamak için aşağıdaki adımları izleyin:
 
 - Appwrite project id
 - Appwrite database id
-- Appwrite collection todos id
+- Appwrite collection 
 - Open AI API key  
    
 3. Bağımlılıkları yükleyin:
