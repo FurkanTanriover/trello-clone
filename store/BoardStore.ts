@@ -91,7 +91,7 @@ export const useBoardStore = create<BoardState>((set, get) => ({
       const newColumns = new Map(state.board.columns);
       const newTodo: Todo = {
         $id,
-        title: todo,
+        title: todo as string,
         status: columnId,
         ...(file && { image: file }),
         $createdAt: new Date().toISOString(),

@@ -48,7 +48,6 @@ function TaskTypeRadioGroup() {
                   ${checked ? `${type.color} bg-opacity-75 text-white` : "bg-white"}
                   relative flex cursor-pointer rounded-lg px-5 py-4 shadow-md focus:outline-none`
                 }
-                focusRing
               >
                 {({ active, checked }) => (
                   <>
