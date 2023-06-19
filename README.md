@@ -31,7 +31,14 @@ Bu projeyi kullanmaya başlamak için aşağıdaki adımları izleyin:
    git clone https://github.com/FurkanTanriover/trello-clone.git
    ```
    
-2. Bağımlılıkları yükleyin:
+2. Kendi environment variable değişkenlerinizi oluşturun ve .env.local dosyasına ekleyin
+
+- Appwrite project id
+- Appwrite database id
+- Appwrite collection todos id
+- Open AI API key  
+   
+3. Bağımlılıkları yükleyin:
 
 ```bash
 cd trello-clone
