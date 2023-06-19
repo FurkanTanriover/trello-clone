@@ -21,6 +21,9 @@ Bu proje, popüler proje yönetim aracı Trello'nun bir kopyasıdır. Next.js ve
 - OpenAI
 - Zustand
 
+## Canlı
+[https://trello-clone-eerahzlct-furkantanriover.vercel.app/] Vercel
+
 ## Başlarken
 
 Bu projeyi kullanmaya başlamak için aşağıdaki adımları izleyin:
