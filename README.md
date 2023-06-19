@@ -22,7 +22,7 @@ Bu proje, popüler proje yönetim aracı Trello'nun bir kopyasıdır. Next.js ve
 - Zustand
 
 ## Canlı
-[https://trello-clone-eerahzlct-furkantanriover.vercel.app/] Vercel
+[Vercel](https://trello-clone-eerahzlct-furkantanriover.vercel.app/)
 
 ## Başlarken
 
